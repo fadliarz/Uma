@@ -1,0 +1,14 @@
+﻿version: '3.4'
+
+services:
+  user.db:
+    container_name: user.db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=UserDb
+    restart: always
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_user:/var/lib/postgresql/data/

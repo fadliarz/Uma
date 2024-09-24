@@ -1,0 +1,11 @@
+﻿services:
+  user.db:
+    image: postgres:16.1-alpine
+volumes:
+  postgres_user:
+
+  trip.api:
+    image: trip.api
+    build:
+      context: .
+      dockerfile: Services/Trip/Trip.API/Dockerfile
